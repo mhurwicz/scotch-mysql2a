@@ -1,0 +1,104 @@
+Michaels-MacBook-Pro:scotch-mysql2 mh$ heroku logs
+2014-09-03T01:55:18.901877+00:00 app[web.1]:     at process._tickCallback (node.js:419:13)
+2014-09-03T01:55:18.901872+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mysql/lib/Connection.js:88:28)
+2014-09-03T01:55:18.901874+00:00 app[web.1]:     at Socket.emit (events.js:117:20)
+2014-09-03T01:55:18.901875+00:00 app[web.1]:     at _stream_readable.js:943:16
+2014-09-03T01:55:19.621693+00:00 heroku[web.1]: Process exited with status 1
+2014-09-03T01:55:19.640951+00:00 heroku[web.1]: State changed from up to crashed
+2014-09-03T02:01:16.939581+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/auth/facebook" host=scotch-mysql2.herokuapp.com request_id=c6186226-356f-4635-bc1b-14bcb3f830a1 fwd="207.118.16.184" dyno= connect= service= status=503 bytes=
+2014-09-03T02:07:43.251184+00:00 heroku[web.1]: State changed from crashed to starting
+2014-09-03T02:07:44.766503+00:00 heroku[web.1]: Starting process with command `npm start`
+2014-09-03T02:07:45.680730+00:00 app[web.1]: 
+2014-09-03T02:07:45.680771+00:00 app[web.1]: 
+2014-09-03T02:07:45.680770+00:00 app[web.1]: > node ./server
+2014-09-03T02:07:45.680768+00:00 app[web.1]: > node-authentication@ start /app
+2014-09-03T02:07:46.023747+00:00 app[web.1]: connect.multipart() will be removed in connect 3.0
+2014-09-03T02:07:46.024464+00:00 app[web.1]: connect.limit() will be removed in connect 3.0
+2014-09-03T02:07:46.024122+00:00 app[web.1]: visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+2014-09-03T02:07:46.042619+00:00 app[web.1]: The magic happens on port 51736
+2014-09-03T02:07:46.535593+00:00 heroku[web.1]: State changed from s
+tarting to up
+2014-09-03T02:08:05.816052+00:00 heroku[router]: at=info method=GET path="/" host=scotch-mysql2.herokuapp.com request_id=3889c67f-46a2-4f24-9caf-d22d76690bcc fwd="207.118.16.184" dyno=web.1 connect=2ms service=17ms status=304 bytes=699
+2014-09-03T02:08:05.817221+00:00 app[web.1]: GET / 304 15ms
+2014-09-03T02:08:08.682196+00:00 app[web.1]: GET /auth/facebook 302 9ms - 434b
+2014-09-03T02:08:08.681347+00:00 heroku[router]: at=info method=GET path="/auth/facebook" host=scotch-mysql2.herokuapp.com request_id=783d931b-c7f0-4190-814a-38e8fdba8b2a fwd="207.118.16.184" dyno=web.1 connect=1ms service=10ms status=302 bytes=733
+2014-09-03T02:08:09.458855+00:00 heroku[router]: at=info method=GET path="/auth/facebook/callback?code=AQCuOjMKn1rT7rwfNV3B-DdLGO4K5HaAGlZI1OX_yd8anjkb2iEmC6ZytKCsupOsny3aROkkTQXu-3e8cwgkyfSi_fKhLiTenvlIlz55CCCjhXXK3ALCI6oS_134hf1xeRARyNGGZUtApS-1YhXEk6766W6c5l3B8IZ3dy8Q4rRu3L3ug5q2tzHYRQZTR7OMkaV2-PjRh-JOIGe8Gw2KNGtafHSrmDWONG6V5mfoeM5pREzYy3OAuUEIAObqobEuqeW9D3mLXLYk60_-aUqNUE4SaHy-Zd9vBHm_Fb2s91EOd9drP70-uk7WLVwxG7m72yE" host=scotch-mysql2.herokuapp.com request_id=949a3abf-9c17-4e49-a9b9-1109441552be fwd="207.118.16.184" dyno=web.1 connect=2ms service=424ms status=302 bytes=1071
+2014-09-03T02:08:09.452146+00:00 app[web.1]: mylog: user is not logged in
+2014-09-03T02:08:09.640806+00:00 app[web.1]: GET / 304 6ms
+2014-09-03T02:08:09.458401+00:00 app[web.1]: GET /auth/facebook/callback?code=AQCuOjMKn1rT7rwfNV3B-DdLGO4K5HaAGlZI1OX_yd8anjkb2iEmC6ZytKCsupOsny3aROkkTQXu-3e8cwgkyfSi_fKhLiTenvlIlz55CCCjhXXK3ALCI6oS_134hf1xeRARyNGGZUtApS-1YhXEk6766W6c5l3B8IZ3dy8Q4rRu3L3ug5q2tzHYRQZTR7OMkaV2-PjRh-JOIGe8Gw2KNGtafHSrmDWONG6V5mfoeM5pREzYy3OAuUEIAObqobEuqeW9D3mLXLYk60_-aUqNUE4SaHy-Zd9vBHm_Fb2s91EOd9drP70-uk7WLVwxG7m72yE 302 422ms - 58b
+2014-09-03T02:08:09.455787+00:00 app[web.1]: mylog: select from users where facebook_id = 10202721196851151
+2014-09-03T02:08:09.455834+00:00 app[web.1]: mylog: no rows with facebook_id =10202721196851151
+2014-09-03T02:08:09.640132+00:00 heroku[router]: at=info method=GET path="/" host=scotch-mysql2.herokuapp.com request_id=7422a8aa-c494-42db-82a4-21d2a5f47361 fwd="207.118.16.184" dyno=web.1 connect=1ms service=8ms status=304 bytes=749
+2014-09-03T02:09:39.452797+00:00 app[web.1]: 
+2014-09-03T02:09:39.472779+00:00 app[web.1]: npm ERR! 
+2014-09-03T02:09:39.473707+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2014-09-03T02:09:39.474590+00:00 app[web.1]: npm ERR! command "/app/vendor/node/bin/node" "/app/vendor/node/bin/npm" "start"
+2014-09-03T02:09:39.472643+00:00 app[web.1]: npm ERR! Exit status 8
+2014-09-03T02:09:39.474148+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2014-09-03T02:09:39.477913+00:00 app[web.1]: npm ERR! 
+2014-09-03T02:09:39.473521+00:00 app[web.1]: npm ERR! This is most likely a problem with the node-authentication package,
+2014-09-03T02:09:39.474896+00:00 app[web.1]: npm ERR! node -v v0.10.31
+2014-09-03T02:09:39.472921+00:00 app[web.1]: npm ERR! Failed at the node-authentication@ start script.
+2014-09-03T02:09:39.475192+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2014-09-03T02:09:39.472451+00:00 app[web.1]: npm ERR! node-authentication@ start: `node ./server`
+2014-09-03T02:09:39.474029+00:00 app[web.1]: npm ERR!     npm owner ls node-authentication
+2014-09-03T02:09:39.478040+00:00 app[web.1]: npm ERR! Additional logging details can be found in:
+2014-09-03T02:09:39.473618+00:00 app[web.1]: npm ERR! not with npm itself.
+2014-09-03T02:09:39.474769+00:00 app[web.1]: npm ERR! cwd /app
+2014-09-03T02:09:39.473935+00:00 app[web.1]: npm ERR! You can get their info via:
+2014-09-03T02:09:39.475044+00:00 app[web.1]: npm ERR! npm -v 1.4.23
+2014-09-03T02:09:39.455116+00:00 app[web.1]:     at Socket.<anonymous> (/app/node_modules/mysql/lib/Connection.js:88:28)
+2014-09-03T02:09:39.466932+00:00 app[web.1]: 
+2014-09-03T02:09:39.455111+00:00 app[web.1]: Error: Connection lost: The server closed the connection.
+2014-09-03T02:09:39.455115+00:00 app[web.1]:     at Protocol.end (/app/node_modules/mysql/lib/protocol/Protocol.js:103:13)
+2014-09-03T02:09:39.455120+00:00 app[web.1]:     at _stream_readable.js:943:16
+2014-09-03T02:09:39.455121+00:00 app[web.1]:     at process._tickCallback (node.js:419:13)
+2014-09-03T02:09:39.455118+00:00 app[web.1]:     at Socket.emit (events.js:117:20)
+2014-09-03T02:09:39.473808+00:00 app[web.1]: npm ERR!     node ./server
+2014-09-03T02:09:39.474444+00:00 app[web.1]: npm ERR! System Linux 3.8.11-ec2
+2014-09-03T02:09:39.478178+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2014-09-03T02:09:39.478360+00:00 app[web.1]: npm ERR! not ok code 0
+2014-09-03T02:09:40.178200+00:00 heroku[web.1]: Process exited with status 1
+2014-09-03T02:09:40.186388+00:00 heroku[web.1]: State changed from up to crashed
+2014-09-03T02:19:28+00:00 heroku[slug-compiler]: Slug compilation started
+2014-09-03T02:19:34+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-09-03T02:19:34.171066+00:00 heroku[web.1]: State changed from crashed to starting
+2014-09-03T02:19:34.082260+00:00 heroku[api]: Deploy 1056d42 by mhurwicz@gmail.com
+2014-09-03T02:19:34.082323+00:00 heroku[api]: Release v25 created by mhurwicz@gmail.com
+2014-09-03T02:19:35.593855+00:00 heroku[web.1]: Starting process with command `npm start`
+2014-09-03T02:19:36.562279+00:00 app[web.1]: 
+2014-09-03T02:19:36.562298+00:00 app[web.1]: > node-authentication@ start /app
+2014-09-03T02:19:36.562301+00:00 app[web.1]: 
+2014-09-03T02:19:36.562299+00:00 app[web.1]: > node ./server
+2014-09-03T02:19:36.897842+00:00 app[web.1]: connect.limit() will be removed in connect 3.0
+2014-09-03T02:19:36.915545+00:00 app[web.1]: The magic happens on port 54162
+2014-09-03T02:19:36.897155+00:00 app[web.1]: connect.multipart() will be removed in connect 3.0
+2014-09-03T02:19:36.897506+00:00 app[web.1]: visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+2014-09-03T02:19:37.339221+00:00 heroku[web.1]: State changed from starting to up
+2014-09-03T02:20:23.532547+00:00 heroku[api]: Scale to web=0 by mhurwicz@gmail.com
+2014-09-03T02:20:24.319067+00:00 heroku[web.1]: State changed from up to down
+2014-09-03T02:20:27.780157+00:00 heroku[web.1]: Process exited with status 143
+2014-09-03T02:20:26.499262+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2014-09-03T02:20:27.951884+00:00 heroku[api]: Scale to web=1 by mhurwicz@gmail.com
+2014-09-03T02:20:30.211032+00:00 heroku[web.1]: Starting process with command `npm start`
+2014-09-03T02:20:31.317204+00:00 app[web.1]: 
+2014-09-03T02:20:31.317222+00:00 app[web.1]: > node-authentication@ start /app
+2014-09-03T02:20:31.317224+00:00 app[web.1]: > node ./server
+2014-09-03T02:20:31.317226+00:00 app[web.1]: 
+2014-09-03T02:20:31.792431+00:00 app[web.1]: connect.multipart() will be removed in connect 3.0
+2014-09-03T02:20:31.793336+00:00 app[web.1]: connect.limit() will be removed in connect 3.0
+2014-09-03T02:20:31.814006+00:00 app[web.1]: The magic happens on port 23490
+2014-09-03T02:20:31.792901+00:00 app[web.1]: visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
+2014-09-03T02:20:31.911321+00:00 heroku[web.1]: State changed from starting to up
+2014-09-03T02:20:39.167993+00:00 heroku[router]: at=info method=GET path="/" host=scotch-mysql2.herokuapp.com request_id=1c08695e-6c6f-4cf7-82ae-4c268121e01a fwd="207.118.16.184" dyno=web.1 connect=1ms service=27ms status=304 bytes=703
+2014-09-03T02:20:39.167496+00:00 app[web.1]: GET / 304 22ms
+2014-09-03T02:20:43.170128+00:00 heroku[router]: at=info method=GET path="/auth/facebook" host=scotch-mysql2.herokuapp.com request_id=fd22f72d-bc9e-489b-a874-8c10995693a8 fwd="207.118.16.184" dyno=web.1 connect=1ms service=14ms status=302 bytes=735
+2014-09-03T02:20:43.168932+00:00 app[web.1]: GET /auth/facebook 302 9ms - 434b
+2014-09-03T02:20:43.937938+00:00 heroku[router]: at=info method=GET path="/auth/facebook/callback?code=AQCOw7-rIhcs6_u_fcd6mzvkbrUbcwbL1CamWph_bwek7VRpGmvlxNszYszWIbGtCf1NMJ2A-EUQnktNAK_hHY6xlhUnBM4OWVT4fOZhcpe2H0WHfzFFXpocs58_V8cMmy1PDRLN5AmZq1tJx5RwIgn2XxikIyKMEeR6_UBNHzpr6rQjqIax4Mue9fMmHK-cbJYLvocv2TEMv9Pz43-jq3SckTtkpULKYnPQiKHU0zXipJn6pFZmjUNrxNYu5BoEt_LSSz0k3UkP5Qr8sK-os1xVLz4WJeF0b6UaRcDhFmvmNgbvRDqJmHfAKSp9yI1xpM4" host=scotch-mysql2.herokuapp.com request_id=e42c84bf-371f-4432-a1d9-3e0b65dd235c fwd="207.118.16.184" dyno=web.1 connect=2ms service=486ms status=302 bytes=1073
+2014-09-03T02:20:43.926654+00:00 app[web.1]: mylog: user is not logged in
+2014-09-03T02:20:44.107277+00:00 app[web.1]: GET / 304 7ms
+2014-09-03T02:20:43.934743+00:00 app[web.1]: GET /auth/facebook/callback?code=AQCOw7-rIhcs6_u_fcd6mzvkbrUbcwbL1CamWph_bwek7VRpGmvlxNszYszWIbGtCf1NMJ2A-EUQnktNAK_hHY6xlhUnBM4OWVT4fOZhcpe2H0WHfzFFXpocs58_V8cMmy1PDRLN5AmZq1tJx5RwIgn2XxikIyKMEeR6_UBNHzpr6rQjqIax4Mue9fMmHK-cbJYLvocv2TEMv9Pz43-jq3SckTtkpULKYnPQiKHU0zXipJn6pFZmjUNrxNYu5BoEt_LSSz0k3UkP5Qr8sK-os1xVLz4WJeF0b6UaRcDhFmvmNgbvRDqJmHfAKSp9yI1xpM4 302 482ms - 58b
+2014-09-03T02:20:43.932928+00:00 app[web.1]: mylog: no rows with facebook_id = 10202721196851151
+2014-09-03T02:20:43.932899+00:00 app[web.1]: mylog: select from users where facebook_id = 10202721196851151
+2014-09-03T02:20:44.108391+00:00 heroku[router]: at=info method=GET path="/" host=scotch-mysql2.herokuapp.com request_id=9f72f73f-4244-40f2-9600-5622512dd5ff fwd="207.118.16.184" dyno=web.1 connect=1ms service=8ms status=304 bytes=751
+Michaels-MacBook-Pro:scotch-mysql2 mh$ 
